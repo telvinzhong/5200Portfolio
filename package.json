@@ -1,0 +1,22 @@
+{
+  "name": "5200portfolio",
+  "version": "1.0.0",
+  "description": "Conceptual Model link:\r https://lucid.app/lucidchart/f04756da-beb0-43cb-b005-3d01255e17d3/edit?beaconFlowId=B9CAB8EAF86CFCF9&page=0_0#?folder_id=home&browser=icon",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/telvinzhong/5200Portfolio.git"
+  },
+  "author": "Telvin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/telvinzhong/5200Portfolio/issues"
+  },
+  "homepage": "https://github.com/telvinzhong/5200Portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
