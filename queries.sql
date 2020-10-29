@@ -27,10 +27,7 @@ GROUP BY Work_role
 HAVING COUNT(*) > 3;
 
 -- Query Five: Complex search criterion.
+-- Window function that compares the total average University GPA against people from each University.
 
-CREATE ASSERTION work_constraint
-CHECK(NOT EXISTS(
-    SELECT *
-    FROM WORK_EXPERIENCE
-    WHERE End_day < Start_day
-));
+SELECT Institution, AVG(GPA) OVER() AS Average_GPA, GPA - AVG(GPA) OVER() as GPA_Difference
+FROM EDUCATION;

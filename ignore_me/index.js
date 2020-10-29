@@ -27,7 +27,6 @@ router.get("/person", async (req, res, next) => {
   }
 });
 
-
 app.listen(port, () => {
     console.log(`Listening on http:localhost:${port}`);
 })
