@@ -23,18 +23,33 @@ router.get("/education", async (req, res, next) => {
   }
 });
 
-// router.post("/cars/create", async (req, res, next) => {
-//   try {
-//     const car = req.body;
-//     console.log("create car", car);
+router.post("/education/create", async (req, res, next) => {
+  try {
+    const educ = req.body;
+    console.log("create education", educ);
 
-//     const carId = await myDB.insertCar(car);
-//     console.log("inserted id", carId);
+    const educId = await myDB.insertEduc(educ);
+    console.log("inserted id", educId);
 
-//     res.redirect("/cars");
-//   } catch (err) {
-//     next(err);
-//   }
-// });
+    res.redirect("/education");
+  } catch (err) {
+    next(err);
+  }
+});
+
+router.get("/education/getnumberofeduc", async (req, res, next) => {
+  try {
+    // const educName = req.query.educName || "";
+
+    const education = await myDB.getNumberOfEduc();
+
+    res.render("education", {
+      education: education,
+      // educName: educName,
+    });
+  } catch (err) {
+    next(err);
+  }
+});
 
 module.exports = router;

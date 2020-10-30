@@ -3,6 +3,19 @@ extends layout
 block content
   h1 Education
 
+  h2 Create Education
+  form(action="/education/create" method="POST")
+    label University:
+      input(type="text" Institution="$Institution")
+    label U_ID:
+      input(type="text" U_ID="$U_ID")
+    br
+    button(type="submit") Create Education
+
+
+  hr
   ul 
     each e in education
-      li=e.Institution
+      // Not sure how to call another query here to get the actual name.
+      li="Person with ID " + e.U_ID + " attended " + e.Institution
+
