@@ -15,6 +15,7 @@ router.get("/education", async (req, res, next) => {
     const education = await myDB.getEducation(educName);
     const numEducation = await myDB.getNumberOfEduc();
 
+    // Render connects to jade and then to browser
     res.render("education", {
       education: education,
       educName: educName,

@@ -49,8 +49,8 @@ CREATE TABLE "EDUCATION"
     Institution VARCHAR(30) NOT NULL,
     Grad_date VARCHAR(30),
     GPA VARCHAR(5),
-    Degree VARCHAR(5) NOT NULL,
-    Major VARCHAR(20) NOT NULL,
+    Degree VARCHAR(5),
+    Major VARCHAR(20),
     Minor VARCHAR(20)
 );
 
