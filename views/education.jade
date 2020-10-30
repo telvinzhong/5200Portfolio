@@ -2,13 +2,16 @@ extends layout
 
 block content
   h1 Education
-
-  h2 Create Education
+  h2 Number of Entries
+  div=numEducation.count
+  h3 Create Education
   form(action="/education/create" method="POST")
     label University:
-      input(type="text" Institution="$Institution")
+      // Every input needs to match 
+      input(type="text" name="$Institution")
+    br
     label U_ID:
-      input(type="text" U_ID="$U_ID")
+      input(type="text" name="$U_ID")
     br
     button(type="submit") Create Education
 

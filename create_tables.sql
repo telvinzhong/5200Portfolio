@@ -58,7 +58,7 @@ CREATE TABLE "COMPANY"
 (
     C_ID INT PRIMARY KEY,
     Company_Name VARCHAR(30) NOT NULL,
-    Logo URL,
+    Logo TEXT,
     Headline VARCHAR(200),
     Industry VARCHAR(20)
 );

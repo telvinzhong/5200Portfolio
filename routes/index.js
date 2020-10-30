@@ -13,10 +13,12 @@ router.get("/education", async (req, res, next) => {
     const educName = req.query.educName || "";
 
     const education = await myDB.getEducation(educName);
+    const numEducation = await myDB.getNumberOfEduc();
 
     res.render("education", {
       education: education,
       educName: educName,
+      numEducation: numEducation
     });
   } catch (err) {
     next(err);
@@ -37,19 +39,19 @@ router.post("/education/create", async (req, res, next) => {
   }
 });
 
-router.get("/education/getnumberofeduc", async (req, res, next) => {
-  try {
-    // const educName = req.query.educName || "";
+// router.get("/education/getnumberofeduc", async (req, res, next) => {
+//   try {
+//     // const educName = req.query.educName || "";
 
-    const education = await myDB.getNumberOfEduc();
+//     const education = await myDB.getNumberOfEduc();
 
-    res.render("education", {
-      education: education,
-      // educName: educName,
-    });
-  } catch (err) {
-    next(err);
-  }
-});
+//     res.render("education", {
+//       education: education,
+//       // educName: educName,
+//     });
+//   } catch (err) {
+//     next(err);
+//   }
+// });
 
 module.exports = router;

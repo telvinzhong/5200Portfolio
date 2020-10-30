@@ -10,7 +10,7 @@ function MyDB() {
     const db = new sqlite3.Database(dbName);
 
     const query = `INSERT INTO EDUCATION(U_ID, Institution)
-  VALUES ($U_ID, $INSTITUTION)
+  VALUES ($U_ID, $Institution)
 `;
 
     // const promise = promisify(db.run.bind(db));
@@ -50,7 +50,6 @@ function MyDB() {
 
     const promise = promisify(db.get.bind(db));
     // console.log(promise(query));
-    // Works in back end but not sure how to show count in front end.
     return promise(query).finally(() => db.close());
   }
 
